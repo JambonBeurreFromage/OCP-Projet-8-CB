@@ -1,0 +1,9 @@
+.collapse {
+	.collapse__main__arrow {
+		background: red;
+	}
+	.collapse__main__arrow-open {
+		background: blue;
+		transform: rotate(180deg);
+	}
+}
