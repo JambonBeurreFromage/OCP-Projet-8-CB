@@ -1,10 +1,10 @@
 import { Link, useLocation } from 'react-router-dom'
 
-function Nav() {
+function Nav({ classNameComponent }) {
 	const location = useLocation()
 
 	return (
-		<nav className="navComponent">
+		<nav className={`navComponent ${classNameComponent}`}>
 			<ul>
 				<li>
 					<Link

@@ -1,0 +1,14 @@
+.archives {
+	min-height: 90vh;
+	text-align: center;
+	margin: 2rem;
+
+	.archives__collapses {
+		height: 5.5rem;
+		border-bottom: solid 3px black;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}

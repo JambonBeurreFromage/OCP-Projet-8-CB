@@ -11,12 +11,14 @@ import Archives from './pages/Archives.jsx'
 ///Importation des components///
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
+import ScroolTop from './components/ScrollTop.jsx'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
 	<React.StrictMode>
 		<Router>
 			<Header />
+			<ScroolTop />
 			<Routes>
 				<Route path="/" element={<Main />} />
 				<Route path="/exhibition" element={<Exhibition />} />

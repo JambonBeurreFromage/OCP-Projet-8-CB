@@ -3,7 +3,7 @@ import Nav from '../components/Nav'
 
 function Exhibition() {
 	return (
-		<main className="main">
+		<main className="exhibition">
 			Bonjour le monde <Nav />
 		</main>
 	)

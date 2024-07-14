@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "title": "Le mot du président",
+        "content": "Le Cercle Historique Quercitain bla bla bla...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin diam nec pulvinar tincidunt. Curabitur tincidunt augue sed orci molestie fringilla. Praesent pulvinar erat vitae mauris euismod, id consequat ipsum laoreet. In consequat congue turpis quis laoreet. Proin ultricies interdum metus eu interdum. Proin nec laoreet lectus, a lacinia erat. Aenean justo augue, luctus ut rutrum ac, placerat vel felis. Cras efficitur ornare dapibus. Nulla fringilla lacus in metus pulvinar laoreet. Proin vel mi nisi. Quisque porttitor volutpat ex vel congue. Aenean faucibus faucibus turpis quis sollicitudin. Suspendisse maximus volutpat eleifend. Aliquam suscipit, massa vel maximus laoreet, elit nulla malesuada arcu, aliquet vestibulum tortor nulla vitae erat. Maecenas pretium congue erat, sed fermentum lectus convallis vitae. Ut nisl libero, viverra a purus sit amet, accumsan laoreet lectus. Quisque vehicula nibh augue, nec semper mauris sagittis eu. Nullam et cursus arcu, et lobortis nisl. Nulla nisi risus, lacinia eu auctor sed. ",
+        "image":"./assets/gregory.jpg"
+    },
+
+    {
+        "id": 2,
+        "title": "",
+        "content": ""
+
+    },
+
+    {
+        "id": 3,
+        "title": "",
+        "content": ""
+    }
+]

@@ -1,27 +1,41 @@
+import { useEffect, useState } from 'react'
+
 ///Impotation component///
-import Collapse from '../components/Collapse'
+import PresentationCard from '../components/PresentationCard.jsx'
 
 ///Importation objets///
-import texte from '../data/texte.json'
+import portrait from '../assets/gregory.jpg'
+import team from '../data/team.json'
 
 function Main() {
+	const [scroll, setScroll] = useState(false)
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const scrollTop = window.scrollY
+			const navHeight = 300
+			if (scrollTop > navHeight) {
+				setScroll(true)
+			} else {
+				setScroll(false)
+			}
+		}
+
+		window.addEventListener('scroll', handleScroll)
+		return () => {
+			window.removeEventListener('scroll', handleScroll)
+		}
+	}, [])
+
 	return (
 		<main className="main">
-			<h1>Cercle Historique Quercitain</h1>
-			<Collapse
-				classe={'collapse__main'}
-				name={texte[0].title}
-				elements={texte[0].content}
-			/>
-			<Collapse
-				classe={'collapse__main'}
-				name={texte[1].title}
-				elements={texte[1].content}
-			/>
-			<Collapse
-				classe={'collapse__main'}
-				name={texte[2].title}
-				elements={texte[2].content}
+			<PresentationCard
+				classe={`presentationCard-left-init ${
+					scroll ? 'presentationCard-left' : ''
+				}`}
+				picture={portrait}
+				title={team[0].title}
+				element={team[0].content}
 			/>
 		</main>
 	)

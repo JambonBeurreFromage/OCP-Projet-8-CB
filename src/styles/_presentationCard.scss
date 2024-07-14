@@ -1,0 +1,36 @@
+@import 'variables';
+
+.presentationCard {
+}
+
+.presentationCard-left-init {
+	width: 85vw;
+	height: auto;
+	margin: 2rem 0;
+	padding: 2rem;
+	border: 2px solid black;
+	border-radius: 20px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+	transform: translateX(-90vw);
+	transition: transform 1.3s ease-in-out;
+	background-color: $main;
+
+	img {
+		width: 7.75rem;
+		height: 7.75rem;
+		margin: 0 1rem 1rem 2rem;
+		object-fit: cover;
+		border-radius: 50%;
+		float: left;
+		shape-outside: margin-box;
+	}
+
+	div {
+		margin-left: 2rem;
+	}
+}
+
+.presentationCard-left {
+	background-color: $main-light;
+	transform: translateX(-9%);
+}

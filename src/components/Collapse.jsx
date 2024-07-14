@@ -1,34 +1,41 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 
 ///importation objets///
 import arrow from '../assets/arrow.png'
 
-function Collapse({ classe, name, elements }) {
-	const [open, setOpen] = useState(false)
+//importation components///
 
-	function deploye() {
-		setOpen(!open)
-	}
+function Collapse({ classe, name, elements, open, deploye }) {
+	// const [open, setOpen] = useState(false)
+
+	// function deploye() {
+	// 	setOpen(!open)
+	// }
 
 	return (
-		<div className="collapse">
+		<div className={`collapse collapse-${classe}`}>
 			{/* Element d'entête du collapse : titre et bouton avec flêche */}
-			<div
+			<button
 				onClick={deploye}
-				className={open ? `${classe} ${classe}-open` : `${classe}`}
+				className={
+					open
+						? `collapse__head-${classe} collapse__head-open-${classe}`
+						: `collapse__head-${classe}`
+				}
 			>
 				<h2>{name}</h2>
-				<button className="collapse__button">
-					<img
-						src={arrow}
-						alt="Flêche"
-						className={
-							open ? `${classe}__arrow-open` : `${classe}__arrow`
-						}
-					/>
-				</button>
-			</div>
-			{open && <div>{elements}</div>}
+
+				<img
+					src={arrow}
+					alt="Flêche"
+					className={`collapse__arrow${
+						open ? '-open-' : '-'
+					}${classe}`}
+				/>
+			</button>
+			{open && (
+				<div className={`collapse__element-${classe}`}>{elements}</div>
+			)}
 		</div>
 	)
 }
