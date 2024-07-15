@@ -4,11 +4,17 @@
 	position: relative;
 	min-height: 90vh;
 	display: flex;
-	flex-direction: column;
+	flex-direction: column-reverse;
 	align-items: center;
 	background: center / cover no-repeat
 		url('../assets/le_quesnoy_plan-1721.jpg');
 	border-top: solid 3px black;
+
+	.main__presentationCard {
+		margin: 2rem;
+		display: grid;
+		gap: 2rem;
+	}
 }
 
 .main::before {

@@ -16,6 +16,7 @@ body {
 	}
 }
 
+//Breakpoint smartphone -> tab
 @media (min-width: 768px) {
 	* {
 		font-size: 24px;
@@ -26,6 +27,14 @@ body {
 
 		h1 {
 			font-size: 4.5rem;
+		}
+	}
+
+	.main {
+		flex-direction: column;
+
+		.main__presentationCard {
+			grid-template-columns: repeat(1, 1fr);
 		}
 	}
 
@@ -53,6 +62,19 @@ body {
 		.collapse__element-archives {
 			left: 15.5rem;
 			top: 90vh;
+		}
+	}
+}
+
+//BReakpoint tab -> desktop
+@media (min-width: 1200px) {
+	.main {
+		.main__presentationCard {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		.presentationCard-element {
+			height: 16rem;
 		}
 	}
 }

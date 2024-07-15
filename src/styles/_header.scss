@@ -1,5 +1,27 @@
 @import 'variables';
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+/* Ajout des animations */
+@keyframes slideDownFadeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(20%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0.2rem);
+	}
+}
+
+@keyframes slideUpFadeOut {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(-20%);
+	}
+}
 
 .header {
 	height: 50vh;
@@ -39,15 +61,42 @@
 			margin: 0 1rem;
 
 			a {
-				// color: white;
+				padding: 0.2rem;
 				transition: color 0.8s ease-in-out;
 			}
 
 			a:hover {
 				color: $main;
+				background-color: rgba($color: $background, $alpha: 1);
 				text-decoration: underline;
 				transition: 0.3s;
 			}
+		}
+
+		.navComponent__subMenu {
+			display: none;
+			position: absolute;
+			transform: translateY(15%);
+			background: white;
+			padding: 0;
+			list-style-type: none;
+			border: 1px solid #ccc;
+			// z-index: 1000;
+			animation: slideUpFadeOut 0.4s ease-in-out forwards;
+
+			li {
+				padding: 8px;
+				white-space: nowrap;
+				a {
+					cursor: pointer;
+				}
+			}
+		}
+
+		.navComponent__subMenu-open {
+			display: block;
+			transform: translateY(4%);
+			animation: slideDownFadeIn 0.4s ease-in-out forwards;
 		}
 	}
 

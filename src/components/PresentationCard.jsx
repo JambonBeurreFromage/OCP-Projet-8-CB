@@ -1,14 +1,26 @@
 function PresentationCard({ classe, picture, title, element }) {
+	const hasSpecificClass = classe.includes('presentationCard-left-init')
+
 	return (
-		<section className={`presentationCard ${classe}`}>
-			<article>
-				<img src={picture} alt={title} />
-				<div>
-					<h2>{title}</h2>
-					<p>{element}</p>
-				</div>
-			</article>
-		</section>
+		<article className={`${classe}`}>
+			{!hasSpecificClass ? (
+				<button>
+					<img src={picture} alt={title} />
+					<div>
+						<h2>{title}</h2>
+						<p>{element}</p>
+					</div>
+				</button>
+			) : (
+				<>
+					<img src={picture} alt={title} />
+					<div>
+						<h2>{title}</h2>
+						<p>{element}</p>
+					</div>
+				</>
+			)}
+		</article>
 	)
 }
 

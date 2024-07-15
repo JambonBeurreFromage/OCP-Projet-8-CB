@@ -5,6 +5,9 @@ import PresentationCard from '../components/PresentationCard.jsx'
 
 ///Importation objets///
 import portrait from '../assets/gregory.jpg'
+import coverEvents from '../assets/events.jpg'
+import coverTeam from '../assets/team.jpg'
+import coverArchive from '../assets/archives.webp'
 import team from '../data/team.json'
 
 function Main() {
@@ -29,14 +32,39 @@ function Main() {
 
 	return (
 		<main className="main">
-			<PresentationCard
-				classe={`presentationCard-left-init ${
-					scroll ? 'presentationCard-left' : ''
-				}`}
-				picture={portrait}
-				title={team[0].title}
-				element={team[0].content}
-			/>
+			<section>
+				<PresentationCard
+					classe={`presentationCard-left-init ${
+						scroll ? 'presentationCard-left' : ''
+					}`}
+					picture={portrait}
+					title={team[0].title}
+					element={team[0].content}
+				/>
+			</section>
+
+			<section className="main__presentationCard">
+				<PresentationCard
+					classe={`presentationCard-element`}
+					picture={coverEvents}
+					title={'Evénement'}
+					element={'Retrouvez nos évévements ici'}
+				/>
+				<PresentationCard
+					classe={`presentationCard-element`}
+					picture={coverTeam}
+					title={'Notre équipe'}
+					element={
+						"L'Histoire et Le Quesnoy au coeur de notre passion"
+					}
+				/>
+				<PresentationCard
+					classe={`presentationCard-element`}
+					picture={coverArchive}
+					title={'Recherches'}
+					element={"Nos actions de collecte d'informations"}
+				/>
+			</section>
 		</main>
 	)
 }
