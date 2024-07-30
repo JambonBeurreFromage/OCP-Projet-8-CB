@@ -46,12 +46,14 @@ function Main() {
 			<section className="main__presentationCard">
 				<PresentationCard
 					classe={`presentationCard-element`}
+					link={'/events'}
 					picture={coverEvents}
 					title={'Evénement'}
 					element={'Retrouvez nos évévements ici'}
 				/>
 				<PresentationCard
 					classe={`presentationCard-element`}
+					link={'/team'}
 					picture={coverTeam}
 					title={'Notre équipe'}
 					element={
@@ -60,6 +62,7 @@ function Main() {
 				/>
 				<PresentationCard
 					classe={`presentationCard-element`}
+					link={'/search'}
 					picture={coverArchive}
 					title={'Recherches'}
 					element={"Nos actions de collecte d'informations"}

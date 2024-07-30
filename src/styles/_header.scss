@@ -25,9 +25,7 @@
 
 .header {
 	height: 50vh;
-	// padding: 2rem;
 	background-color: $background;
-	background-image: url(../assets/bastionvert.jpg);
 	background-position: 50%;
 	background-size: cover;
 
@@ -44,7 +42,7 @@
 		z-index: 2;
 		top: 0;
 		width: 100%;
-		height: 4rem;
+		height: 3rem;
 		background-color: rgba($color: #ffff, $alpha: 0.5);
 		transition: background-color 0.8s ease-in-out;
 		position: fixed;
@@ -62,14 +60,14 @@
 
 			a {
 				padding: 0.2rem;
-				transition: color 0.8s ease-in-out;
+				transition: color 0.3s ease-in-out;
 			}
 
-			a:hover {
-				color: $main;
+			a:hover,
+			.openMenu {
+				color: white;
 				background-color: rgba($color: $background, $alpha: 1);
 				text-decoration: underline;
-				transition: 0.3s;
 			}
 		}
 
@@ -77,22 +75,30 @@
 			display: none;
 			position: absolute;
 			transform: translateY(15%);
-			background: white;
 			padding: 0;
 			list-style-type: none;
-			border: 1px solid #ccc;
-			// z-index: 1000;
 			animation: slideUpFadeOut 0.4s ease-in-out forwards;
+			background-color: rgba($color: #ffff, $alpha: 0.2);
+			backdrop-filter: blur(5px);
 
 			li {
-				padding: 8px;
+				margin: 0;
 				white-space: nowrap;
+
 				a {
 					cursor: pointer;
+					text-decoration: none;
+					color: black; // Color spécifique pour les liens dans subMenu
+					padding: 8px;
+					display: block; // Pour que le lien prenne tout l'espace du li
+					transition: background-color 0.3s ease-in-out;
+				}
+
+				a:hover {
+					background-color: white; // Background hover pour les liens dans subMenu
 				}
 			}
 		}
-
 		.navComponent__subMenu-open {
 			display: block;
 			transform: translateY(4%);

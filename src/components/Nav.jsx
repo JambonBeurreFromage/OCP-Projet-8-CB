@@ -22,11 +22,11 @@ function Nav({ classNameComponent }) {
 				>
 					<Link
 						to="/"
-						className={
+						className={`${
 							location.pathname === '/'
 								? 'header__nav-select'
 								: ''
-						}
+						} ${openMenu === 'menu1' ? 'openMenu' : ''}`}
 					>
 						Accueil
 					</Link>
@@ -38,9 +38,31 @@ function Nav({ classNameComponent }) {
 								: ''
 						}`}
 					>
-						<li>Evénement</li>
-						<li>Notre équipe</li>
-						<li>Recherches</li>
+						<li className="navComponent__subMenu-li">
+							{' '}
+							<Link
+								to={'/events'}
+								className="navComponent__subMenu-li-a"
+							>
+								Evénement
+							</Link>
+						</li>
+						<li className="navComponent__subMenu-li">
+							<Link
+								to={'/team'}
+								className="navComponent__subMenu-li-a"
+							>
+								Notre équipe
+							</Link>
+						</li>
+						<li className="navComponent__subMenu-li">
+							<Link
+								to={'/search'}
+								className="navComponent__subMenu-li-a"
+							>
+								Recherches
+							</Link>
+						</li>
 					</ul>
 				</li>
 				<li>
