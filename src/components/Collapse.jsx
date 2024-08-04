@@ -1,22 +1,17 @@
-// import { useState } from 'react'
-
 ///importation objets///
 import arrow from '../assets/arrow.png'
 
-//importation components///
-
 function Collapse({ classe, name, elements, open, deploye }) {
-	// const [open, setOpen] = useState(false)
-
-	// function deploye() {
-	// 	setOpen(!open)
-	// }
+	// Fonction combinée qui appelle deploye et ScrollToAnchor
+	const handleClick = () => {
+		deploye() // Appel de la fonction deploye
+	}
 
 	return (
-		<div className={`collapse collapse-${classe}`}>
+		<div className={`collapse collapse-${classe}`} id={name}>
 			{/* Element d'entête du collapse : titre et bouton avec flêche */}
 			<button
-				onClick={deploye}
+				onClick={handleClick}
 				className={
 					open
 						? `collapse__head-${classe} collapse__head-open-${classe}`

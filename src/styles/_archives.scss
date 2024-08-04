@@ -1,14 +1,30 @@
-.archives {
-	min-height: 90vh;
-	text-align: center;
-	margin: 2rem;
+@import 'variables';
 
-	.archives__collapses {
-		height: 5.5rem;
-		border-bottom: solid 3px black;
+.archives {
+	// min-height: 90vh;
+
+	.archives__nav {
+		margin: 2rem;
 		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+
+		ul {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
 	}
+
+	.archives__nav--scroll {
+	}
+
+	// .archives__collapses {
+	// 	height: 5.5rem;
+	// 	border-bottom: solid 3px black;
+	// 	display: flex;
+	// 	flex-direction: row;
+	// 	flex-wrap: wrap;
+	// 	justify-content: center;
+	// }
 }

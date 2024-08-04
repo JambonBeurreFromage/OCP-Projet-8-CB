@@ -19,7 +19,32 @@ function Archives() {
 
 	return (
 		<main className="archives">
-			<nav className="archives__collapses">
+			<nav className="archives__nav">
+				<Collapse
+					classe="archives"
+					name="Projet 1"
+					elements={`<p>test 1</p> ${texte[2].content}`}
+					open={openCollapse === 'Projet 1'}
+					deploye={() => changeCollapse('Projet 1')}
+				/>
+
+				<Collapse
+					classe={'archives'}
+					name={'Projet 2'}
+					elements={<p>test 2</p>}
+					open={openCollapse === 'Projet 2'}
+					deploye={() => changeCollapse('Projet 2')}
+				/>
+
+				<Collapse
+					classe={'archives'}
+					name={'Projet 3'}
+					elements={<p>test 3</p>}
+					open={openCollapse === 'Projet 3'}
+					deploye={() => changeCollapse('Projet 3')}
+				/>
+			</nav>
+			{/* <nav className="archives__collapses">
 				{texte.map((item, index) => (
 					<Collapse
 						key={index}
@@ -30,7 +55,7 @@ function Archives() {
 						deploye={() => changeCollapse(item.id)}
 					/>
 				))}
-			</nav>
+			</nav> */}
 		</main>
 	)
 }

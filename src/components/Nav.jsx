@@ -1,6 +1,8 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 
+import weaselLogo from '../assets/beletteMarron256.png'
+
 function Nav({ classNameComponent }) {
 	const location = useLocation()
 	const [openMenu, setOpenMenu] = useState(null)
@@ -15,6 +17,7 @@ function Nav({ classNameComponent }) {
 
 	return (
 		<nav className={`navComponent ${classNameComponent}`}>
+			<img src={weaselLogo} alt="Logo de la page" />
 			<ul>
 				<li
 					onMouseEnter={() => handleMouseEnter('menu1')}
@@ -38,7 +41,7 @@ function Nav({ classNameComponent }) {
 								: ''
 						}`}
 					>
-						<li className="navComponent__subMenu-li">
+						<li className={`navComponent__subMenu-li`}>
 							{' '}
 							<Link
 								to={'/events'}
