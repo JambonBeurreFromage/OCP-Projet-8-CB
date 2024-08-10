@@ -5,8 +5,8 @@ import { useEffect, useState } from 'react'
 import Nav from '../components/Nav.jsx'
 
 /// Importation objets ///
-import backgroundImageMain from '../assets/bgbastionvert.jpg'
-// import backgroundImageArchives from '../assets/bganother-image.jpg'
+import backgroundImageMain from '../assets/main_header_background.jpg'
+import backgroundImageArchives from '../assets/tech_header_background.png'
 // import backgroundImageTeam from '../assets/bgteam.jpg'
 // import backgroundImageEvents from '../assets/bgevents.jpg'
 // import backgroundImageResearch from '../assets/bgresearch.jpg'
@@ -28,9 +28,9 @@ function Header() {
 				case '/':
 					setBackgroundImage(backgroundImageMain)
 					break
-				// case '/archives':
-				// 	setBackgroundImage(backgroundImageArchives)
-				// 	break
+				case '/archives':
+					setBackgroundImage(backgroundImageArchives)
+					break
 				// case '/main/team':
 				// 	setBackgroundImage(backgroundImageTeam)
 				// 	break
@@ -51,6 +51,17 @@ function Header() {
 	useEffect(() => {
 		const handleScroll = () => {
 			const scrollTop = window.scrollY
+
+			// Ajout de l'effet de parallaxe lors du scroll
+			const parallaxFactor = -0.3 // Ajuste ce facteur pour contrôler l'effet de parallaxe
+
+			const header = document.querySelector('.header.parallax')
+			if (header) {
+				header.style.backgroundPosition = `center ${
+					scrollTop * parallaxFactor
+				}px`
+			}
+
 			const navHeight = 50
 			if (scrollTop > navHeight) {
 				setScroll(true)
@@ -68,16 +79,29 @@ function Header() {
 	if (showHeader) {
 		return (
 			<header
-				className="header"
+				className={`header parallax ${
+					scroll ? 'header__nav-scroll' : ''
+				}`}
 				style={{ backgroundImage: `url(${backgroundImage})` }}
 			>
 				<>
 					<div className="header__cover">
 						<Link to="/">
 							<h1>
-								<span id="title1">Cerle</span>
-								<span id="title2">Historique</span>
-								<span id="title3">Quercitain</span>
+								{backgroundImage === backgroundImageMain && (
+									<>
+										<span id="title2">Votre projet</span>
+										<span id="title3">notre</span>
+										<span id="title1">Aventure...</span>
+									</>
+								)}
+								{backgroundImage ===
+									backgroundImageArchives && (
+									<>
+										<span id="title2">Technologies</span>
+										<span id="title1">Utilisées</span>
+									</>
+								)}
 							</h1>
 						</Link>
 					</div>

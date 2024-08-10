@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 
-import weaselLogo from '../assets/beletteMarron256.png'
+import logo from '../assets/beletteMarron256.png'
 
 function Nav({ classNameComponent }) {
 	const location = useLocation()
@@ -17,7 +17,7 @@ function Nav({ classNameComponent }) {
 
 	return (
 		<nav className={`navComponent ${classNameComponent}`}>
-			<img src={weaselLogo} alt="Logo de la page" />
+			<img src={logo} alt="Logo de la page" />
 			<ul>
 				<li
 					onMouseEnter={() => handleMouseEnter('menu1')}
@@ -34,7 +34,8 @@ function Nav({ classNameComponent }) {
 						Accueil
 					</Link>
 
-					<ul
+					{/* Sous menu de la navigation */}
+					{/* <ul
 						className={`navComponent__subMenu ${
 							openMenu === 'menu1'
 								? 'navComponent__subMenu-open'
@@ -66,19 +67,7 @@ function Nav({ classNameComponent }) {
 								Recherches
 							</Link>
 						</li>
-					</ul>
-				</li>
-				<li>
-					<Link
-						to="/exhibition"
-						className={
-							location.pathname === '/exhibition'
-								? 'header__nav-select'
-								: ''
-						}
-					>
-						Exposition
-					</Link>
+					</ul> */}
 				</li>
 				<li>
 					<Link
@@ -89,7 +78,19 @@ function Nav({ classNameComponent }) {
 								: ''
 						}
 					>
-						Archives
+						Technologies
+					</Link>
+				</li>
+				<li>
+					<Link
+						to="/exhibition"
+						className={
+							location.pathname === '/exhibition'
+								? 'header__nav-select'
+								: ''
+						}
+					>
+						Contact
 					</Link>
 				</li>
 			</ul>

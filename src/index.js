@@ -17,6 +17,10 @@ import Footer from './components/Footer.jsx'
 
 ///Importation des outils///
 import ScroolTop from './components/ScrollTop.jsx'
+import Modal from 'react-modal'
+
+// Définir l'élément racine pour l'accessibilité
+Modal.setAppElement('#root')
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
