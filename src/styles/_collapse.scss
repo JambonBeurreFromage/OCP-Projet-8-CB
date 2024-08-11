@@ -47,6 +47,83 @@
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		border: 1px solid #ddd;
 		padding: 0 10px;
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		flex-wrap: wrap;
+
+		.collapse-item {
+			position: relative;
+			display: inline-block;
+			margin: 0.5rem;
+			text-align: center;
+
+			&__image {
+				width: 4rem; // Taille de l'image
+				height: 4rem;
+				object-fit: contain;
+				display: block;
+				margin: 0 auto;
+			}
+
+			&__title {
+				margin-top: 0.25rem;
+				font-size: 1rem;
+			}
+
+			&__tooltip {
+				visibility: hidden;
+				background-color: rgba(0, 0, 0, 0.75);
+				color: #fff;
+				text-align: center;
+				border-radius: 10px;
+				padding: 0.25rem;
+				position: absolute;
+				z-index: 1;
+				bottom: 115%; // Position au-dessus de l'image
+				left: 50%;
+				transform: translateX(-50%);
+				white-space: normal;
+				opacity: 0;
+				transition: opacity 0.3s ease-in-out;
+				width: 20rem; // Limite la largeur de l'info-bulle
+				max-height: 4rem;
+				overflow: hidden;
+				text-overflow: ellipsis; // Ajoute des points de suspension si le texte déborde
+				word-wrap: break-word;
+
+				/* Pointe de l'info-bulle */
+				&::after {
+					content: '';
+					position: absolute;
+					top: 100%;
+					left: 50%;
+					transform: translateX(-50%);
+					border-width: 5px;
+					border-style: solid;
+					border-color: rgba(0, 0, 0, 0.75) transparent transparent
+						transparent;
+				}
+			}
+
+			&:hover .collapse-item__tooltip {
+				visibility: visible;
+				opacity: 1;
+			}
+
+			.collapse-item__progress-container {
+				margin-top: 0.5rem;
+				height: 8px;
+				background-color: #fde6e6;
+				border-radius: 4px;
+				overflow: hidden;
+			}
+
+			.collapse-item__progress-bar {
+				height: 100%;
+				background-color: #4caf50; // Couleur de la barre de progression
+			}
+		}
 	}
 }
 

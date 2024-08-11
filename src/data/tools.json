@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "title": "Canva",
+        "level":4,
+        "content": "Outil en ligne de conception graphique permettant de créer des visuels.",
+        "image": "/images/icones/tools/canva.png"
+    },
+    {
+        "id": 2,
+        "title": "Figma",
+        "level":6,
+        "content": "Outil de design d'interface utilisateur collaboratif, utilisé pour la création de maquettes et de prototypes.",
+        "image": "/images/icones/tools/figma.png"
+    },
+    {
+        "id": 3,
+        "title": "GitHub",
+        "level":8,
+        "content": "Plateforme de gestion de versions de code source et de collaboration pour le développement logiciel, basée sur Git.",
+        "image": "/images/icones/tools/github.png"
+    },
+    {
+        "id": 4,
+        "title": "Linux",
+        "level":5,
+        "content": "Système d'exploitation open source.",
+        "image": "/images/icones/tools/linux.png"
+    },
+    {
+        "id": 5,
+        "title": "Linux Mint",
+        "level":7,
+        "content": "Distribution Linux basée sur Ubuntu.",
+        "image": "/images/icones/tools/linux_mint.png"
+    },
+    {
+        "id": 6,
+        "title": "Microsoft Office Excel",
+        "level":8,
+        "content": "Application de tableur utilisée pour la gestion de données.",
+        "image": "/images/icones/tools/microsoft_office_excel.png"
+    },
+    {
+        "id": 7,
+        "title": "Microsoft Office OneNote",
+        "level":9,
+        "content": "Application de prise de notes numérique.",
+        "image": "/images/icones/tools/microsoft_office_onenote.png"
+    },
+    {
+        "id": 8,
+        "title": "Microsoft Office Publisher",
+        "level":9,
+        "content": "Outil de création de publication assistée par ordinateur.",
+        "image": "/images/icones/tools/microsoft_office_publisher.png"
+    },
+    {
+        "id": 9,
+        "title": "Microsoft Office Word",
+        "level":10,
+        "content": "Traitement de texte.",
+        "image": "/images/icones/tools/microsoft_office_word.png"
+    },
+    {
+        "id": 10,
+        "title": "Microsoft Office PowerPoint",
+        "level":8,
+        "content": "Application de présentation utilisée pour créer des diaporamas.",
+        "image": "/images/icones/tools/microsoft_power_point.png"
+    },
+    {
+        "id": 11,
+        "title": "Notion",
+        "level":5,
+        "content": "Application de prise de notes et d'organisation.",
+        "image": "/images/icones/tools/notion.png"
+    },
+    {
+        "id": 12,
+        "title": "NPM",
+        "level":5,
+        "content": "Gestionnaire de paquets pour Node.js, utilisé pour installer et gérer les dépendances des projets JavaScript.",
+        "image": "/images/icones/tools/npm.png"
+    },
+    {
+        "id": 13,
+        "title": "Postman",
+        "level":5,
+        "content": "Outil de test d'API permettant de créer, envoyer et analyser des requêtes HTTP.",
+        "image": "/images/icones/tools/postman.png"
+    },
+    {
+        "id": 14,
+        "title": "VSCode",
+        "level":6,
+        "content": "Éditeur de code source.",
+        "image": "/images/icones/tools/vscode.png"
+    },
+    {
+        "id": 15,
+        "title": "Yarn",
+        "level":6,
+        "content": "Gestionnaire de paquets pour JavaScript.",
+        "image": "/images/icones/tools/yarn.png"
+    }
+]

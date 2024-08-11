@@ -1,24 +1,31 @@
+@import 'variables';
+
 .main {
 	z-index: 1;
 	overflow-x: hidden;
 	position: relative;
-	min-height: 110vh;
+	min-height: 80vh;
 	display: flex;
 	flex-direction: column-reverse;
-	align-items: center;
-	background: center / cover no-repeat url('../assets/main_background.png');
+	justify-content: flex-end;
+	background: url('../assets/main_background.png');
+	background-position: center; /* Centre l'image de fond */
+	background-size: cover; /* S'assure que l'image couvre tout le container */
+	background-repeat: no-repeat; /* Empêche la répétition de l'image */
+	background-attachment: fixed; /* Crée l'effet de parallaxe en fixant l'image */
 	border-top: solid 3px black;
 	background-position: center bottom;
 	transition: background-position 0.3s ease-out; /* Transition pour un effet progressif */
 
 	.main__presentationCard {
 		margin: 2rem;
+		box-sizing: content-box;
+		// width: 100%;
 		display: grid;
 		gap: 2rem;
 
 		.main__presentationCard__title {
-			// width: 100%;
-			// height: 100%;
+			z-index: 2;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
@@ -27,27 +34,35 @@
 			background-color: rgb(74, 53, 152);
 			background: center / cover no-repeat
 				url('../assets/title_background.png');
+
 			cursor: pointer;
 
 			h3 {
 				padding: 0.5rem 1rem;
-				color: white;
+				font-size: 1.5rem;
+				color: $main-light;
 			}
 			img {
 				height: 6rem;
+				transform: rotate(180deg);
+				transition: transform 0.6s;
 			}
+		}
+
+		.main__presentationCard__title:hover {
+			border: solid 2px rgb(120, 89, 231);
 		}
 
 		.main__presentationCard__title-open {
 			img {
 				transition: transform 0.6s;
-				transform: translateX(20px) rotate(180deg);
-				scale: 1.1;
+				transform: rotate(270deg);
 			}
 		}
 	}
 
 	.rocket {
+		z-index: 2;
 		width: 5rem;
 		position: fixed;
 		right: 2rem;

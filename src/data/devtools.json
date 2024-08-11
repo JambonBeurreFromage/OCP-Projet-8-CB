@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "title": "CSS",
+        "content": "Feuilles de style en cascade",
+        "level":8,
+        "image": "/images/icones/dev/css.png"
+    },
+    {
+        "id": 2,
+        "title": "Express",
+        "level":5,
+        "content": "Framework web minimaliste et non structuré pour Node.js",
+        "image": "/images/icones/dev/express.png"
+    },
+    {
+        "id": 3,
+        "title": "HTML",
+        "level":9,
+        "content": "Langage de balisage hypertexte",
+        "image": "/images/icones/dev/html.png"
+    },
+    {
+        "id": 4,
+        "title": "JS",
+        "level":7,
+        "content": "JavaScript, un langage de programmation de haut niveau.",
+        "image": "/images/icones/dev/js.png"
+    },
+    {
+        "id": 5,
+        "title": "MongoDB",
+        "level":6,
+        "content": "Un programme de base de données orienté document, multiplateforme et en source disponible",
+        "image": "/images/icones/dev/mongodb.png"
+    },
+    {
+        "id": 6,
+        "title": "NodeJS",
+        "level":6,
+        "content": "Un environnement d'exécution JavaScript open-source et multiplateforme côté serveur",
+        "image": "/images/icones/dev/nodejs.png"
+    },
+    {
+        "id": 7,
+        "title": "React",
+        "level":7,
+        "content": "Une bibliothèque JavaScript pour construire des interfaces utilisateur",
+        "image": "/images/icones/dev/react.png"
+    },
+    {
+        "id": 8,
+        "title": "SASS",
+        "level":7,
+        "content": "Syntactically Awesome Stylesheets, un langage de script préprocesseur qui est interprété ou compilé en CSS",
+        "image": "/images/icones/dev/sass.png"
+    },
+    {
+        "id": 9,
+        "title": "Firebase",
+        "level":5,
+        "content": "Firebase est une plateforme de développement d'applications web et mobiles proposée par Google",
+        "image": "/images/icones/dev/firebase.png"
+    }
+]

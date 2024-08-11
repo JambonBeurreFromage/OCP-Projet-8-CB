@@ -26,8 +26,10 @@
 .header {
 	height: 50vh;
 	background-color: $background;
-	background-position: 50%;
-	background-size: cover;
+	background-position: center; /* Centre l'image de fond */
+	background-size: cover; /* S'assure que l'image couvre tout le container */
+	background-repeat: no-repeat; /* Empêche la répétition de l'image */
+	background-attachment: fixed; /* Crée l'effet de parallaxe en fixant l'image */
 
 	&.parallax {
 		background-position: center 0;
@@ -48,7 +50,7 @@
 		top: 0;
 		width: 100%;
 		height: 3.5rem;
-		padding-bottom: 0.5rem;
+		padding-bottom: 1rem;
 		background-color: rgba($color: #ffff, $alpha: 0.5);
 		transition: background-color 0.8s ease-in-out;
 		position: fixed;
@@ -137,7 +139,7 @@
 
 		span {
 			color: $main;
-			font-size: 3rem;
+			font-size: 2rem;
 			font-family: 'Dancing Script', 'Verdana', sans-serif;
 		}
 		#title1 {

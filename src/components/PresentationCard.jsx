@@ -1,18 +1,26 @@
-// import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import Modal from 'react-modal'
-
 import Carrousel from './Carrousel'
 
-function PresentationCard({ classe, picture, title, element, children }) {
+function PresentationCard({ classe, picture, title, element, data }) {
 	const hasSpecificClass = classe.includes('presentationCard-left-init')
 
 	const [modalIsOpen, setModalIsOpen] = useState(false)
 	const openModal = () => setModalIsOpen(true)
 	const closeModal = () => setModalIsOpen(false)
 
+	// const test = () => {
+	// 	console.log('Data:', data)
+	// 	if (data && data.picture) {
+	// 		console.log('Carrousel Pictures:', data.picture)
+	// 	} else {
+	// 		console.log('Data or data.picture is undefined')
+	// 	}
+	// }
+
 	return (
 		<article className={`${classe}`}>
+			{/* <button onClick={test}>test</button> */}
 			{!hasSpecificClass ? (
 				<>
 					<button onClick={openModal}>
@@ -34,16 +42,28 @@ function PresentationCard({ classe, picture, title, element, children }) {
 						overlayClassName="custom-overlay"
 					>
 						<div className="modal-content">
-							<h4>test</h4>
-							<div>
-								<Carrousel title={'ok'} pictures={children} />
-							</div>
 							<button
 								className="close-modal-button"
 								onClick={closeModal}
 							>
-								Close Modal
+								X
 							</button>
+							<h4>{title}</h4>
+							<div className="modal-content-background">
+								<div className="modal-content-modale">
+									<Carrousel
+										title={title}
+										pictures={
+											data && data.picture
+												? data.picture
+												: []
+										}
+									/>
+								</div>
+								<div className="modal-content-texte">
+									{data.content}
+								</div>
+							</div>
 						</div>
 					</Modal>
 				</>

@@ -71,9 +71,9 @@ function Nav({ classNameComponent }) {
 				</li>
 				<li>
 					<Link
-						to="/archives"
+						to="/tools"
 						className={
-							location.pathname === '/archives'
+							location.pathname === '/tools'
 								? 'header__nav-select'
 								: ''
 						}
@@ -83,9 +83,9 @@ function Nav({ classNameComponent }) {
 				</li>
 				<li>
 					<Link
-						to="/exhibition"
+						to="/contact"
 						className={
-							location.pathname === '/exhibition'
+							location.pathname === '/contact'
 								? 'header__nav-select'
 								: ''
 						}

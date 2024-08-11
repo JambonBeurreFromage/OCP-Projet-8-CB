@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "picture": [
+            "/images/projet_1/screen_1.jpg",
+            "/images/projet_1/screen_2.jpg",
+            "/images/projet_1/screen_3.jpg"
+        ],
+        "content" : "Conception d'un site web pour un architecte d'intérieur, mettant en avant ses créations à travers une galerie interactive. L'implémentation de filtres dynamiques permet aux utilisateurs de parcourir les projets selon différents critères. Le site inclut également un espace administrateur sécurisé, offrant des fonctionnalités d'édition telles que l'ajout et la suppression de projets. Cette solution permet à l'architecte de gérer son portfolio de manière autonome et de présenter son travail de façon professionnelle et engageante."
+    },
+    {
+        "id": 2,
+        "picture": [
+            "/images/projet_2/screen_1.jpg",
+            "/images/projet_2/screen_2.jpg",
+            "/images/projet_2/screen_3.jpg"
+        ],
+        "content" : "Conception d'une plateforme web dédiée à la location d'appartements entre particuliers, en utilisant React pour une expérience utilisateur fluide et réactive. Le site intègre plusieurs fonctionnalités dynamiques, telles qu'un carrousel pour la visualisation des images, des sections collapsibles pour une navigation intuitive, et la récupération des notes des utilisateurs depuis une base de données. Un projet avec des interfaces utilisateur interactives et des données géré en temps réel, garantissant une expérience utilisateur optimisée."
+    },
+    {
+        "id": 3,
+        "picture": [
+            "/images/projet_3/screen_1.jpg",
+            "/images/projet_3/screen_2.jpg",
+            "/images/projet_3/screen_3.jpg"
+        ],
+        "content" : "Ce projet a consisté à concevoir et intégrer une base de données, à développer une API RESTful, et à créer les logiques permettant l'enregistrement, la notation, et la modification des livres. Ces fonctionnalités offrent une expérience utilisateur personnalisée. J'ai également implémenté les fonctionnalités d'inscription et de connexion, tout en assurant la sécurité de l'application. Ce travail visait à développer un backend complet, incluant la gestion des données et la sécurisation de l'application web."
+    }
+]

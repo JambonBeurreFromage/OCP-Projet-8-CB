@@ -5,8 +5,9 @@ import { useEffect, useState } from 'react'
 import Nav from '../components/Nav.jsx'
 
 /// Importation objets ///
-import backgroundImageMain from '../assets/main_header_background.jpg'
-import backgroundImageArchives from '../assets/tech_header_background.png'
+import backgroundImageMain from '../assets/header_background_main.jpg'
+import backgroundImageTools from '../assets/header_background_tech.png'
+import backgroundImageContact from '../assets/header_background_contact.png'
 // import backgroundImageTeam from '../assets/bgteam.jpg'
 // import backgroundImageEvents from '../assets/bgevents.jpg'
 // import backgroundImageResearch from '../assets/bgresearch.jpg'
@@ -28,8 +29,11 @@ function Header() {
 				case '/':
 					setBackgroundImage(backgroundImageMain)
 					break
-				case '/archives':
-					setBackgroundImage(backgroundImageArchives)
+				case '/tools':
+					setBackgroundImage(backgroundImageTools)
+					break
+				case '/contact':
+					setBackgroundImage(backgroundImageContact)
 					break
 				// case '/main/team':
 				// 	setBackgroundImage(backgroundImageTeam)
@@ -53,7 +57,7 @@ function Header() {
 			const scrollTop = window.scrollY
 
 			// Ajout de l'effet de parallaxe lors du scroll
-			const parallaxFactor = -0.3 // Ajuste ce facteur pour contrôler l'effet de parallaxe
+			const parallaxFactor = -1.3 // Ajuste ce facteur pour contrôler l'effet de parallaxe
 
 			const header = document.querySelector('.header.parallax')
 			if (header) {
@@ -95,8 +99,7 @@ function Header() {
 										<span id="title1">Aventure...</span>
 									</>
 								)}
-								{backgroundImage ===
-									backgroundImageArchives && (
+								{backgroundImage === backgroundImageTools && (
 									<>
 										<span id="title2">Technologies</span>
 										<span id="title1">Utilisées</span>
