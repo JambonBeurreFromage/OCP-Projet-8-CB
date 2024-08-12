@@ -1,13 +1,23 @@
 import { useEffect, useState } from 'react'
+
+///COMPONENTS
 import PresentationCard from '../components/PresentationCard.jsx'
+import Collapse from '../components/Collapse.jsx'
+
+///IMAGES
 import pins from '../assets/pins.jpg'
 import rocket from '../assets/rocket.png'
 import coverProjet1 from '../assets/cover_projects/projet_1.jpg'
 import coverProjet2 from '../assets/cover_projects/projet_2.jpg'
 import coverProjet3 from '../assets/cover_projects/projet_3.jpg'
 import arrow from '../assets/arrow.png'
+
+///DATA
 import team from '../data/team.json'
 import picturesBDD from '../data/pictures.json'
+import dev1 from '../data/devtoolsprojet1.json'
+import dev2 from '../data/devtoolsprojet2.json'
+import dev3 from '../data/devtoolsprojet3.json'
 
 function Main() {
 	const [scroll, setScroll] = useState(false)
@@ -69,6 +79,120 @@ function Main() {
 				/>
 			</section>
 
+			<section className="project-steps">
+				<h2 className="project-steps__title">
+					Votre projet étape par étape
+				</h2>
+				<article className="project-steps__list">
+					<div className="project-step">
+						<div className="project-step__number">1</div>
+						<h3 className="project-step__title">
+							Définition de votre projet
+						</h3>
+						<p className="project-step__description">
+							Déterminer les objectifs principaux, identifier le
+							public cible, discuter des fonctionnalités, fixer un
+							budget et un calendrier.
+						</p>
+					</div>
+					<div className="project-step">
+						<div className="project-step__number">2</div>
+						<h3 className="project-step__title">
+							Conception d'une maquette sur mesure
+						</h3>
+						<p className="project-step__description">
+							Création de wireframes, développement de prototypes
+							interactifs, révisions et approbation par vos soins.
+						</p>
+					</div>
+					<div className="project-step">
+						<div className="project-step__number">3</div>
+						<h3 className="project-step__title">
+							Création des contenus
+						</h3>
+						<p className="project-step__description">
+							Rédaction des textes, sélection des visuels,
+							optimisation SEO.
+						</p>
+					</div>
+					<div className="project-step">
+						<div className="project-step__number">4</div>
+						<h3 className="project-step__title">
+							Développement du site
+						</h3>
+						<p className="project-step__description">
+							Intégration des maquettes avec du code (technologies
+							sélectionnées pour correspondre au mieux à vos
+							besoins). Développement des fonctionnalités
+							dynamiques dans un design moderne et interactif,
+							adapté à tous les supports (mobile, tablette et
+							ordinateur) et garantissant l’accessibilité à tous.
+						</p>
+					</div>
+
+					<div className="project-step">
+						<div className="project-step__number">5</div>
+						<h3 className="project-step__title">
+							Tests et ajustements
+						</h3>
+
+						<ul>
+							<li>
+								Tests de compatibilité et de performance :
+								Vérification du fonctionnement sur différents
+								navigateurs et appareils.
+							</li>
+							<li>
+								Analyse de la vitesse de chargement, de
+								l’accessibilité et de l’optimisation avec des
+								outils d’audits puissants.
+							</li>
+							<li>
+								Ajustement des fonctionnalités en grâce aux
+								retours des testeurs.
+							</li>
+						</ul>
+					</div>
+
+					<div className="project-step">
+						<div className="project-step__number">6</div>
+						<h3 className="project-step__title">
+							Mise en ligne et déploiement
+						</h3>
+						<p className="project-step__description">
+							Sélection de la solution d’hébergement la plus
+							adaptée à votre usage pour éviter des coûts
+							inutiles. Assurance de la sécurité et de la
+							stabilité de la solution retenue.
+						</p>
+					</div>
+
+					<div className="project-step">
+						<div className="project-step__number">7</div>
+						<h3 className="project-step__title">
+							Formation et documentation
+						</h3>
+						<p className="project-step__description">
+							Formation à l’utilisation de votre nouveau site,
+							tant sur ses fonctionnalités que sur ses
+							possibilités de mise à jour.
+						</p>
+					</div>
+
+					<div className="project-step">
+						<div className="project-step__number">8</div>
+						<h3 className="project-step__title">
+							Suivi et maintenance
+						</h3>
+						<p className="project-step__description">
+							Assurance du support technique, de la mise à jour et
+							de l’évolution continue de votre site. Garantie par
+							un contrat de maintenance établi sur mesure.
+						</p>
+					</div>
+				</article>
+			</section>
+
 			<section className="main__presentationCard">
 				{/* Card de présentation */}
 				<div
@@ -93,7 +217,15 @@ function Main() {
 						'Mise en avant des projets avec une galerie photos'
 					}
 					data={picturesBDD[0]}
-				/>
+				>
+					<Collapse
+						classe={'archives'}
+						name={'Outils utilisés'}
+						children={dev1}
+						// open={openCollapse === 'Réseau'}
+						// deploye={() => changeCollapse('Réseau')}
+					/>
+				</PresentationCard>
 
 				<PresentationCard
 					classe={`presentationCard-element ${
@@ -103,7 +235,16 @@ function Main() {
 					title={'Site de location immobilière'}
 					element={'Fiches produits et présentation'}
 					data={picturesBDD[1]}
-				/>
+				>
+					<Collapse
+						classe={'archives'}
+						name={'Outils utilisés'}
+						children={dev2}
+						// open={openCollapse === 'Réseau'}
+						// deploye={() => changeCollapse('Réseau')}
+					/>
+				</PresentationCard>
+
 				<PresentationCard
 					classe={`presentationCard-element ${
 						showCards ? 'presentationCard-element-inline' : ''
@@ -112,7 +253,16 @@ function Main() {
 					title={'Site de notation de livres'}
 					element={'Création de bases de données'}
 					data={picturesBDD[2]}
-				/>
+				>
+					<Collapse
+						classe={'archives'}
+						name={'Outils utilisés'}
+						children={dev3}
+						// open={openCollapse === 'Réseau'}
+						// deploye={() => changeCollapse('Réseau')}
+					/>
+				</PresentationCard>
+
 				<img
 					className={`rocket ${scroll ? '' : 'rocket--hidden'}`}
 					src={rocket}

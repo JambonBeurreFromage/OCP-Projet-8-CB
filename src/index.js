@@ -7,6 +7,7 @@ import './styles/index.scss'
 import Main from './pages/Main.jsx'
 import Exhibition from './pages/Contact.jsx'
 import Archives from './pages/Tools.jsx'
+import NoPage from './pages/404.jsx'
 // import Events from './pages/Events.jsx'
 // import Team from './pages/Team.jsx'
 // import Search from './pages/Search.jsx'
@@ -35,6 +36,7 @@ root.render(
 				<Route path="/search" element={<Search />} /> */}
 				<Route path="/contact" element={<Exhibition />} />
 				<Route path="/tools" element={<Archives />} />
+				<Route path="/*" element={<NoPage />} />
 			</Routes>
 			<Footer />
 		</Router>

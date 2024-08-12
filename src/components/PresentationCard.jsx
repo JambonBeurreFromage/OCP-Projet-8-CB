@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Modal from 'react-modal'
 import Carrousel from './Carrousel'
 
-function PresentationCard({ classe, picture, title, element, data }) {
+function PresentationCard({ classe, picture, title, element, data, children }) {
 	const hasSpecificClass = classe.includes('presentationCard-left-init')
 
 	const [modalIsOpen, setModalIsOpen] = useState(false)
@@ -62,6 +62,7 @@ function PresentationCard({ classe, picture, title, element, data }) {
 								</div>
 								<div className="modal-content-texte">
 									{data.content}
+									{children}
 								</div>
 							</div>
 						</div>

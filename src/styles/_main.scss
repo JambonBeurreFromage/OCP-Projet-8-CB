@@ -61,6 +61,73 @@
 		}
 	}
 
+	.project-steps {
+		background-color: #f7f7f7;
+		padding: 2rem;
+		border-radius: 20px;
+		max-width: 90vw;
+		margin: 3rem auto;
+
+		&__title {
+			text-align: center;
+			font-size: 2rem;
+			color: #333;
+			margin-bottom: 2rem;
+		}
+
+		&__list {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 1.5rem;
+		}
+	}
+
+	.project-step {
+		background-color: #ffffff;
+		min-height: 13rem;
+		padding: 1.5rem;
+		border-radius: 1rem;
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+		text-align: center;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		cursor: default;
+
+		&:hover {
+			transform: translateY(-0.5rem);
+			box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+		}
+
+		&__number {
+			background-color: $main-light;
+			color: #333;
+			width: 3rem;
+			height: 3rem;
+			line-height: 3rem;
+			border-radius: 50%;
+			font-size: 1.5rem;
+			margin: 0 auto 1rem;
+		}
+
+		&__title {
+			font-size: 1.25rem;
+			color: $background;
+			margin-bottom: 1rem;
+		}
+
+		&__description {
+			font-size: 0.75rem;
+			color: #666;
+			line-height: 1.5;
+			text-align: justify;
+		}
+		li {
+			font-size: 0.75rem;
+			text-align: left;
+			color: #666;
+			line-height: 1.5;
+		}
+	}
+
 	.rocket {
 		z-index: 2;
 		width: 5rem;

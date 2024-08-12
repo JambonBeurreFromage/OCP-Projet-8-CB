@@ -1,0 +1,28 @@
+@import 'variables';
+
+.noPage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 1.5rem 3rem;
+	text-align: center;
+
+	h1,
+	h2,
+	a {
+		font-size: 8rem;
+		color: $main-light;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		color: $main-light;
+	}
+
+	a {
+		margin: 2rem 0 5rem 0;
+		font-size: 1rem;
+		color: black;
+		text-decoration: underline;
+	}
+}

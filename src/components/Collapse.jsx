@@ -52,7 +52,7 @@ function Collapse({ classe, name, children, open, deploye }) {
 										className="collapse-item__image"
 									/>
 									<div className="collapse-item__tooltip">
-										{item.content}
+										{item.title} : {item.content}
 									</div>
 									<div className="collapse-item__progress-container">
 										<div

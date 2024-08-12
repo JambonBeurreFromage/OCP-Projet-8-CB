@@ -18,13 +18,19 @@ function Header() {
 	const [scroll, setScroll] = useState(false)
 	const [backgroundImage, setBackgroundImage] = useState(backgroundImageMain)
 
-	// A chaque modification de l'url, vérifie si nous sommes sur l'exposition pour masquer ou non la nav
-	//Change le background du header selo la cible
+	// Liste des chemins valides
+
+	// À chaque modification de l'URL, vérifier si le chemin est valide
 	useEffect(() => {
-		if (location.pathname === '/exhibition') {
-			setShowHeader(false)
-		} else {
+		const validPaths = [
+			'/',
+			'/tools',
+			'/contact'
+			// Ajoutez ici d'autres chemins valides si nécessaire
+		]
+		if (validPaths.includes(location.pathname)) {
 			setShowHeader(true)
+			//Change le background du header selo la cible
 			switch (location.pathname) {
 				case '/':
 					setBackgroundImage(backgroundImageMain)
@@ -48,6 +54,8 @@ function Header() {
 					setBackgroundImage(backgroundImageMain)
 					break
 			}
+		} else {
+			setShowHeader(false)
 		}
 	}, [location])
 
@@ -120,7 +128,7 @@ function Header() {
 			</header>
 		)
 	} else {
-		return <header>Exposition</header>
+		return null
 	}
 }
 

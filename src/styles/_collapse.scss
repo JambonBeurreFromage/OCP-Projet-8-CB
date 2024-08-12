@@ -4,7 +4,7 @@
 }
 .collapse-archives {
 	width: 100%;
-	margin-bottom: 0.5rem;
+	margin-top: 0.5rem;
 
 	.collapse__head-archives {
 		width: 100%;
@@ -86,8 +86,8 @@
 				white-space: normal;
 				opacity: 0;
 				transition: opacity 0.3s ease-in-out;
-				width: 20rem; // Limite la largeur de l'info-bulle
-				max-height: 4rem;
+				width: 15rem; // Limite la largeur de l'info-bulle
+				max-height: 6rem;
 				overflow: hidden;
 				text-overflow: ellipsis; // Ajoute des points de suspension si le texte déborde
 				word-wrap: break-word;
