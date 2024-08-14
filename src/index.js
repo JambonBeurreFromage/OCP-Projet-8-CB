@@ -5,7 +5,7 @@ import './styles/index.scss'
 
 ///Importation pages///
 import Main from './pages/Main.jsx'
-import Exhibition from './pages/Contact.jsx'
+import Contact from './pages/Contact.jsx'
 import Archives from './pages/Tools.jsx'
 import NoPage from './pages/404.jsx'
 // import Events from './pages/Events.jsx'
@@ -34,7 +34,7 @@ root.render(
 				{/* <Route path="/events" element={<Events />} />
 				<Route path="/team" element={<Team />} />
 				<Route path="/search" element={<Search />} /> */}
-				<Route path="/contact" element={<Exhibition />} />
+				<Route path="/contact" element={<Contact />} />
 				<Route path="/tools" element={<Archives />} />
 				<Route path="/*" element={<NoPage />} />
 			</Routes>

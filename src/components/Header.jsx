@@ -113,6 +113,14 @@ function Header() {
 										<span id="title1">Utilisées</span>
 									</>
 								)}
+								{backgroundImage === backgroundImageContact && (
+									<>
+										<span id="title1">Prêt à lancer</span>
+										<span id="title2">
+											votre projet ? 🚀
+										</span>
+									</>
+								)}
 							</h1>
 						</Link>
 					</div>

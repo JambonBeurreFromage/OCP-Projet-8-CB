@@ -29,7 +29,7 @@ body {
 	}
 
 	.header {
-		height: 90vh;
+		height: 100vh;
 
 		nav {
 			flex-direction: row;
@@ -42,6 +42,14 @@ body {
 			span {
 				font-size: 3rem;
 			}
+		}
+	}
+
+	.footer {
+		.footer-container {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
 		}
 	}
 
