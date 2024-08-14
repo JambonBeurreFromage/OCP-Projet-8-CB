@@ -59,8 +59,9 @@
 		justify-content: center;
 		flex-direction: column;
 
-		img {
-			height: 100%;
+		.nav__img {
+			height: 3rem;
+			margin-top: 0.5rem;
 		}
 
 		ul {
@@ -72,7 +73,7 @@
 			margin: 0 1rem;
 
 			a {
-				border-radius: 0 10px 0 0;
+				// border-radius: 0 10px 0 0;
 				padding: 0.2rem;
 				transition: color 0.3s ease-in-out;
 			}
@@ -140,7 +141,7 @@
 		span {
 			color: $main;
 			font-size: 2rem;
-			font-family: 'Dancing Script', 'Verdana', sans-serif;
+			font-family: 'Verdana', sans-serif;
 		}
 		#title1 {
 			margin-left: 7rem;

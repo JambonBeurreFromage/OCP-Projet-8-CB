@@ -43,10 +43,8 @@ function Footer() {
 				<div className="footer-section legal-info">
 					<span>Mentions légales</span>
 					<ul>
-						<li>Nom Prénom</li>
-						<li>Adresse</li>
-						<li>Siret</li>
-						<li>Hebergeur</li>
+						<li>Hebergeur : OVH - 2 rue Kellermann</li>
+						<li>59100 Roubaix - France</li>
 					</ul>
 				</div>
 			</div>

@@ -42,13 +42,13 @@ function Archives() {
 						solutions efficaces pour y répondre.
 						<br /> <br />
 						Aujourd'hui, je vous propose de mettre ces compétences
-						au service de votre projet. Vous trouverez ci-dessous un
-						aperçu des technologies et outils que j'utilise pour
-						mener à bien les projets de développement.
+						au service de votre projet. Vous trouverez sur cette
+						page un aperçu des technologies et outils que j'utilise
+						pour mener à bien les projets de développement.
 					</p>
 					<span>
-						Vous pouvez aussi découvrir mes réalisations en
-						<Link to="/#realisation"> page d'Accueil</Link>
+						Vous pouvez également découvrir mes réalisations en
+						<Link to="/#realisation"> page d'Accueil.🖱️</Link>
 					</span>
 				</div>
 			</section>

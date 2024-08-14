@@ -36,6 +36,10 @@ body {
 			justify-content: space-between;
 			padding: 0 2rem;
 			box-sizing: border-box;
+
+			.nav__img {
+				margin-top: 0;
+			}
 		}
 
 		h1 {
@@ -74,6 +78,14 @@ body {
 		}
 	}
 
+	.custom-modal {
+		width: 70vw;
+
+		.modal-content {
+			margin: 2rem;
+		}
+	}
+
 	.archives {
 		flex-direction: column;
 
@@ -81,18 +93,6 @@ body {
 			margin-bottom: 0;
 			margin-top: 2rem;
 		}
-
-		// .archives__nav {
-		// }
-
-		// .archives__collapses {
-		// 	width: 15rem;
-		// 	height: 100%;
-		// 	border-right: solid 3px black;
-		// 	border-bottom: none;
-		// 	display: flex;
-		// 	flex-direction: column;
-		// }
 	}
 
 	// .collapse-archives {

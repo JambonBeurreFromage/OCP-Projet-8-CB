@@ -17,7 +17,9 @@ function Nav({ classNameComponent }) {
 
 	return (
 		<nav className={`navComponent ${classNameComponent}`}>
-			<img src={logo} alt="Logo de la page" />
+			<Link to="/">
+				<img className="nav__img" src={logo} alt="Logo de la page" />
+			</Link>
 			<ul>
 				<li
 					onMouseEnter={() => handleMouseEnter('menu1')}

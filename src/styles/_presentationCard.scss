@@ -91,6 +91,10 @@
 	}
 }
 
+.presentationCard-element:focus {
+	border: solid 2px rgb(255, 255, 255);
+}
+
 .presentationCard-element-inline {
 	display: inline;
 }
@@ -119,7 +123,7 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 70vw;
+	width: 95vw;
 	height: 70vh;
 	background: white;
 	padding: 20px;
@@ -129,14 +133,14 @@
 
 	// Styles pour le contenu de la modale
 	.modal-content {
-		margin: 2rem;
+		// margin: 2rem;
 
 		h4 {
 			color: #333;
 		}
 
 		.close-modal-button {
-			position: absolute;
+			position: fixed;
 			right: 1rem;
 			top: 1rem;
 			height: 2rem;

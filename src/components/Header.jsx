@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 /// Importation components ///
@@ -98,31 +98,27 @@ function Header() {
 			>
 				<>
 					<div className="header__cover">
-						<Link to="/">
-							<h1>
-								{backgroundImage === backgroundImageMain && (
-									<>
-										<span id="title2">Votre projet</span>
-										<span id="title3">notre</span>
-										<span id="title1">Aventure...</span>
-									</>
-								)}
-								{backgroundImage === backgroundImageTools && (
-									<>
-										<span id="title2">Technologies</span>
-										<span id="title1">Utilisées</span>
-									</>
-								)}
-								{backgroundImage === backgroundImageContact && (
-									<>
-										<span id="title1">Prêt à lancer</span>
-										<span id="title2">
-											votre projet ? 🚀
-										</span>
-									</>
-								)}
-							</h1>
-						</Link>
+						<h1>
+							{backgroundImage === backgroundImageMain && (
+								<>
+									<span id="title2">Votre projet</span>
+									<span id="title3">notre</span>
+									<span id="title1">Aventure...</span>
+								</>
+							)}
+							{backgroundImage === backgroundImageTools && (
+								<>
+									<span id="title2">Technologies</span>
+									<span id="title1">Utilisées</span>
+								</>
+							)}
+							{backgroundImage === backgroundImageContact && (
+								<>
+									<span id="title1">Prêt à lancer</span>
+									<span id="title2">votre projet ? 🚀</span>
+								</>
+							)}
+						</h1>
 					</div>
 
 					<>
