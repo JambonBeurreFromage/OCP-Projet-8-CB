@@ -2,8 +2,6 @@ import { useState } from 'react'
 
 import emailjs from 'emailjs-com'
 
-///Importation components///
-
 function Contact() {
 	const [formData, setFormData] = useState({
 		name: '',
@@ -29,10 +27,10 @@ function Contact() {
 
 		emailjs
 			.send(
-				'YOUR_SERVICE_ID', // Remplacez par votre ID de service
-				'YOUR_TEMPLATE_ID', // Remplacez par votre ID de modèle
+				process.env.REACT_APP_EMAILJS_SERVICE_ID,
+				process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
 				formData,
-				'YOUR_USER_ID' // Remplacez par votre clé publique (User ID)
+				process.env.REACT_APP_EMAILJS_USER_ID
 			)
 			.then(
 				(result) => {

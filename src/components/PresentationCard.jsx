@@ -61,7 +61,9 @@ function PresentationCard({ classe, picture, title, element, data, children }) {
 									/>
 								</div>
 								<div className="modal-content-texte">
-									{data.content}
+									<div className="modal-content-text-p1">
+										{data.content}
+									</div>
 									{children}
 								</div>
 							</div>
@@ -73,7 +75,10 @@ function PresentationCard({ classe, picture, title, element, data, children }) {
 					<img src={picture} alt={title} />
 					<div>
 						<h2>{title}</h2>
-						<p>{element}</p>
+						<p>
+							{element}
+							{children}
+						</p>
 					</div>
 				</>
 			)}

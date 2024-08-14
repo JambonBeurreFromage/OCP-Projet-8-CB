@@ -1,9 +1,11 @@
 // import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 ///Impotation component///
 import Collapse from '../components/Collapse.jsx'
 
 ///Importation objets///
+import photo from '../assets/christian.jpg'
 import dev from '../data/devtools.json'
 import tools from '../data/tools.json'
 
@@ -20,7 +22,37 @@ function Archives() {
 
 	return (
 		<main className="archives">
-			<nav className="archives__nav">
+			<section className="archives__portrait">
+				<img src={photo} alt="Portrait du développeur" />
+				<div>
+					<h2>Le mot de présentation - Portrait d'un développeur</h2>
+					<p>
+						Après des études supérieures en génie logiciel et
+						automatisme, j'ai suivi un parcours professionnel
+						diversifié qui m'a conduit vers la relation clients,
+						puis la gestion de projets en santé publique. Pendant 5
+						ans, j'ai occupé le poste de chargé de projet, mais mon
+						intérêt pour le développement informatique m'a
+						finalement poussé à revenir vers ma passion première.{' '}
+						<br /> <br />
+						Ces expériences m'ont permis de développer des
+						compétences solides en gestion, organisation et
+						coordination, tout en affinant ma capacité à comprendre
+						les besoins des utilisateurs et à concevoir des
+						solutions efficaces pour y répondre.
+						<br /> <br />
+						Aujourd'hui, je vous propose de mettre ces compétences
+						au service de votre projet. Vous trouverez ci-dessous un
+						aperçu des technologies et outils que j'utilise pour
+						mener à bien les projets de développement.
+					</p>
+					<span>
+						Vous pouvez aussi découvrir mes réalisations en
+						<Link to="/#realisation"> page d'Accueil</Link>
+					</span>
+				</div>
+			</section>
+			<section className="archives__nav">
 				<Collapse
 					classe="archives"
 					name="Développement"
@@ -78,7 +110,7 @@ function Archives() {
 						</div>
 					}
 				</Collapse>
-			</nav>
+			</section>
 			{/* <nav className="archives__collapses">
 				{texte.map((item, index) => (
 					<Collapse

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 ///COMPONENTS
 import PresentationCard from '../components/PresentationCard.jsx'
@@ -76,7 +77,9 @@ function Main() {
 					picture={pins}
 					title={team[0].title}
 					element={team[0].content}
-				/>
+				>
+					<Link to="/tools"> En savoir plus</Link>💬
+				</PresentationCard>
 			</section>
 
 			<section className="project-steps">
@@ -192,7 +195,7 @@ function Main() {
 					</div>
 				</article>
 			</section>
-
+			<div id="realisation"></div>
 			<section className="main__presentationCard">
 				{/* Card de présentation */}
 				<div
@@ -218,6 +221,31 @@ function Main() {
 					}
 					data={picturesBDD[0]}
 				>
+					<div className="presentationCard-element__detail">
+						<span>Enjeux de ce projet :</span>
+						<ul>
+							<li>
+								Mise en place de fonctionnalités pour les
+								utilisateurs connectés
+							</li>
+							<li>
+								Suppression et ajout d'éléments dans la base de
+								données
+							</li>
+							<li>
+								Sécurisation des sessions utilisateurs avec des
+								tokens
+							</li>
+						</ul>
+						<span> Dépôt gitHub : </span>
+						<a
+							href="https://github.com/JambonBeurreFromage/OCP-Projet-3-CB"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							ici
+						</a>
+					</div>
 					<Collapse
 						classe={'archives'}
 						name={'Outils utilisés'}
@@ -236,6 +264,25 @@ function Main() {
 					element={'Fiches produits et présentation'}
 					data={picturesBDD[1]}
 				>
+					<div className="presentationCard-element__detail">
+						<span>Enjeux de ce projet :</span>
+						<ul>
+							<li>Refonte totale du projet avec React</li>
+							<li>Reponsivité et modernité de l'interface</li>
+							<li>
+								Utilisation de la logique "components" pour une
+								WebApp rapide et légère
+							</li>
+						</ul>
+						<span> Dépôt gitHub : </span>
+						<a
+							href="https://github.com/JambonBeurreFromage/OCP-Projet-5-CB"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							ici
+						</a>
+					</div>
 					<Collapse
 						classe={'archives'}
 						name={'Outils utilisés'}
@@ -254,6 +301,22 @@ function Main() {
 					element={'Création de bases de données'}
 					data={picturesBDD[2]}
 				>
+					<div className="presentationCard-element__detail">
+						<span>Enjeux de ce projet :</span>
+						<ul>
+							<li>Conception complète d'un BackEnd</li>
+							<li>Application des protocoles de sécurité</li>
+							<li>Formalisation d'une base de données</li>
+						</ul>
+						<span> Dépôt gitHub : </span>
+						<a
+							href="https://github.com/JambonBeurreFromage/OCP-Projet-6-CB"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							ici
+						</a>
+					</div>
 					<Collapse
 						classe={'archives'}
 						name={'Outils utilisés'}

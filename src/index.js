@@ -17,7 +17,7 @@ import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 
 ///Importation des outils///
-import ScroolTop from './components/ScrollTop.jsx'
+import ScrollTop from './components/ScrollTop.jsx'
 import Modal from 'react-modal'
 
 // Définir l'élément racine pour l'accessibilité
@@ -28,7 +28,7 @@ root.render(
 	<React.StrictMode>
 		<Router>
 			<Header />
-			<ScroolTop />
+			<ScrollTop />
 			<Routes>
 				<Route path="/" element={<Main />} />
 				{/* <Route path="/events" element={<Events />} />

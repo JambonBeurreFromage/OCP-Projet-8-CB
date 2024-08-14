@@ -75,11 +75,15 @@ body {
 	}
 
 	.archives {
-		.archives__nav {
-			.collapse-archives {
-				width: 80%;
-			}
+		flex-direction: column;
+
+		.archives__portrait {
+			margin-bottom: 0;
+			margin-top: 2rem;
 		}
+
+		// .archives__nav {
+		// }
 
 		// .archives__collapses {
 		// 	width: 15rem;
@@ -90,6 +94,10 @@ body {
 		// 	flex-direction: column;
 		// }
 	}
+
+	// .collapse-archives {
+	// 	width: 95%;
+	// }
 
 	// .collapse-archives {
 	// 	.collapse__head-archives {
