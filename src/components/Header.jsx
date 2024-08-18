@@ -114,8 +114,9 @@ function Header() {
 							)}
 							{backgroundImage === backgroundImageContact && (
 								<>
-									<span id="title1">Prêt à lancer</span>
-									<span id="title2">votre projet ? 🚀</span>
+									<span id="title2">Prêt à lancer</span>
+									<span id="title1">votre</span>
+									<span id="title1">aventure ? 🚀</span>
 								</>
 							)}
 						</h1>

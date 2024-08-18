@@ -198,7 +198,7 @@ function Main() {
 			<div id="realisation"></div>
 			<section className="main__presentationCard">
 				{/* Card de présentation */}
-				<div
+				<button
 					className={`main__presentationCard__title ${
 						showCards ? 'main__presentationCard__title-open' : ''
 					}`}
@@ -206,7 +206,7 @@ function Main() {
 				>
 					<h3>Découvrez nos réalisations</h3>
 					<img src={arrow} alt="flêche à droite" />
-				</div>
+				</button>
 
 				<PresentationCard
 					//Si on click sur le title (showCard vaut vrai) on passe la classe pour mettre inline les presentation card

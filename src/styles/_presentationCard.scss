@@ -64,6 +64,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: contain;
+			border-radius: inherit;
 			transition: transform 0.3s ease-in-out;
 		}
 
@@ -89,10 +90,14 @@
 			pointer-events: none;
 		}
 	}
+	button:focus {
+		border: solid 4px rgb(120, 89, 231); /* Facultatif, pour une bordure supplémentaire */
+		border-radius: inherit;
+	}
 }
 
-.presentationCard-element:focus {
-	border: solid 2px rgb(255, 255, 255);
+.presentationCard-element:hover {
+	border: solid 2px rgb(120, 89, 231);
 }
 
 .presentationCard-element-inline {
