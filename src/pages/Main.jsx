@@ -82,6 +82,26 @@ function Main() {
 				</PresentationCard>
 			</section>
 
+			<section className="projects">
+				<h2>Ce que nous pouvons faire ensemble :</h2>
+				<div className="projects__list">
+					<ul>
+						<li>🚀 Création de site Web</li>
+						<li>
+							🚀 Modernisation et renforcement de votre présence
+							numérique
+						</li>
+					</ul>
+					<ul>
+						<li>🚀 Réalisation de WebApp</li>
+						<li>
+							🚀 Création d'outils digitaux pour gérer votre
+							activité
+						</li>
+					</ul>
+				</div>
+			</section>
+
 			<section className="project-steps">
 				<h2 className="project-steps__title">
 					Votre projet étape par étape

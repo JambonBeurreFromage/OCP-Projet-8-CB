@@ -69,6 +69,21 @@ body {
 			}
 		}
 
+		.projects {
+			.projects__list {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				gap: 0.5rem;
+
+				li {
+					display: flex;
+					align-items: center;
+					width: 20rem;
+				}
+			}
+		}
+
 		.project-steps {
 			.project-steps__list {
 				display: grid;
